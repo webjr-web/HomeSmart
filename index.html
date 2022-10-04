@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSmart</title>
+    <!-- tailwind -->
+    <link rel="shortcut icon" href="assets/logomark.svg"  type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+
+
+    <style type="text/tailwindcss">
+
+        @layer utilities {
+
+            ::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent,rgba(249,188,35,1));
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent,rgba(217,119,6,1));
+}
+
+
+            .button_focus{
+
+                @apply focus:outline-none focus:ring-neutral-900 focus-visible:ring-2 focus:ring-offset-8 focus:ring-offset-amber-400 rounded-sm focus:transition-colors ;     
+
+            }
+
+            .button_hover{
+                @apply hover:scale-90 transition-transform;
+            }
+
+        }
+
+    </style>
+
+    <!--  -->
+</head>
+<body class="max-w-[2000px] mx-auto  bg-neutral-200 text-neutral-800  dark:bg-neutral-800   dark:text-neutral-200   overflow-x-hidden" >
+
+    <nav class="p-4  mx-auto bg-amber-400 lg:py-0  flex justify-center">
+
+        <div class="container flex items-center justify-between lg:py-6 xl:pl-2  ">
+
+            <a href="" aria-label="go to homePage" class="hover:scale-95 transition-transform  lg:absolute lg:left-1/2 lg:-translate-x-1/2   button_focus"> 
+
+                <img src="assets/logo.svg" alt="img of logo" class="w-48 md:w-52 lg:w-60 xl:w-72"> 
+
+            </a>
+            
+            <button id="menu" class="lg:hidden  button_hover button_focus">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  
+            </button>
+
+            <div id="menu_item" class="lg:z-auto menu_items hidden  flex-col absolute left-0 right-0 top-16 items-center gap-4 justify-center bg-amber-400 py-8 pb-6 text-lg drop-shadow-lg rounded-sm lg:flex lg:static lg:flex-row lg:filter-none lg:w-full lg:justify-between lg:py-0 ">
+
+                <a href="" class=" menu_elements  button_hover button_focus lg:ml-6">Home</a>
+                <a href="" class=" menu_elements  button_hover button_focus lg:mr-auto">Contact</a>
+                <a href="" class=" menu_elements  button_hover button_focus">Login</a>
+                <a href="" class=" menu_elements bg-teal-800 rounded-full px-5 py-1 text-neutral-50 hover:drop-shadow-xl transition-shadow button_focus ">Sign Up</a>
+
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <header class="relative  pt-7 md:pt-14 lg:pt-28  flex justify-center">
+        <div class="bg-gradient-to-b from-amber-400 to-amber-600 absolute inset-0 bottom-8 md:bottom-14 lg:bottom-32 xl:bottom-40 -z-10"></div>
+        <div class="container grid place-items-center">
+
+            <img src="assets/couch.png" alt="" class="py-6 row-start-1 row-end-2 col-start-1 col-end-2">
+            <img src="assets/app.svg" alt="" class="py-6 row-start-1 row-end-2 col-end-2 mx-auto w-40 md:w-56 lg:w-72">
+
+        </div>
+        
+    </header>
+
+    <main class="grid grid-cols-1 gap-20 sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden">
+        
+        <a href="" class="flex gap-4  bg-amber-400 rounded-full   text-neutral-50 hover:drop-shadow-xl transition-shadow button_focus  mx-auto py-3 px-10 mt-12 ">
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+
+            <span class="text-black">Download The App</span>
+              
+        </a>
+
+        <section class="relative ">
+
+            <img src="assets/dots.svg" alt="" class="hidden lg:block absolute top-0 lg:-top-14 xl:-top-14 lg:-left-24  xl:-left-14">
+            <img src="assets/dots.svg" alt="" class="hidden lg:block absolute top-0 lg:-top-14 xl:-top-14 lg:-right-24 xl:-right-14">
+            
+            <div class="flex flex-row justify-center  items-start text-center gap-y-20 gap-x-6 lg:gap-x-0 flex-wrap mx-auto max-w-5xl">
+
+                <div id="card_item1" class="card_item flex flex-col  items-center text-center gap-4 flex-wrap max-w-xs">
+
+                    <div class="p-4 rounded-full border-amber-400 border-8 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14  ">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold">Safe</h2>
+                    <p>Our products are secure and private out-of-the-box</p>
+
+                </div>
+
+                <div id="card_item2" class="card_item flex flex-col  items-center text-center gap-4 flex-wrap max-w-xs">
+                    <div class="p-4 rounded-full border-amber-400 border-8 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                          </svg>
+                          
+                    </div>
+                    <h2 class="text-4xl font-bold">Efficient</h2>
+                    <p>Feel good about your wallet and the environment</p>
+                </div>
+
+                <div id="card_item3" class="card_item flex flex-col  items-center text-center gap-4 flex-wrap max-w-xs">
+                    <div class="p-4 rounded-full border-amber-400 border-8 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                          </svg>
+                          
+                    </div>
+                    <h2 class="text-4xl font-bold">Proven</h2>
+                    <p>Leading the Smart Home world for 10 years</p>
+                </div>
+                  
+
+            </div>
+            
+        </section>
+
+        <section class="flex flex-col gap-8 items-center text-center">
+
+            <h2 class="text-4xl font-bold text-amber-400">Our Partners</h2>
+
+            <p class="max-w-lg">We’ve partnered with hundreds of smart home brands to help you create a smart home that fits your needs and doesn’t lock you in.</p>
+
+            <div class="flex gap-10 gap-y-7 flex-wrap mx-auto max-w-md justify-center md:max-w-none lg:max-w-lg ">
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner1.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner2.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner3.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner4.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner5.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner6.svg" alt="" class="">
+                </div>
+
+                <div class="shadow-md rounded-md w-24 h-24 button_hover bg-neutral-200 flex items-center p-4">
+                    <img src="assets/partner7.svg" alt="" class="">
+                </div>
+                
+                
+                
+            </div>
+
+        </section>
+
+        <section id="table_section " class="relative ">
+
+            <div class="flex flex-col-reverse max-w-5xl mx-auto gap-y-20 md:items-center lg:flex-row lg:justify-between lg:max-w-7xl">
+
+                <div class="flex flex-col gap-6 text-left items-start  md:max-w-md">
+                    <h2 class="text-4xl font-bold">Relax, you’re home!</h2>
+                    <p>All our supported hardware includes traditional inputs so you can integrate our products into your house in a way that’s best for everyone.</p>
+                    <button class="drop-shadow-lg hover:filter-none button_focus bg-amber-400 rounded-full px-6 py-2">
+                        Sign Up
+                    </button>
+                </div>
+
+                <div class="">
+                    <img src="assets/table.png" alt="">
+                </div>
+
+            </div>
+            
+            <div class="md:border-8 border-amber-400  absolute bottom-0 -right-32 w-60 h-60 rounded-full -z-10 ">
+
+                <!-- circle div -->
+
+            </div >
+
+            <div class="bg-teal-900   h-24 w-screen -mx-8 max-w-none mt-10 xl:h-36 xl:absolute bottom-0 xl:-z-10">
+
+                <!-- rect div -->
+
+            </div>
+
+        </section>
+
+        <section class="relative h-screen">
+            
+            <div class="flex items-center flex-col absolute -top-20 left-1/2 -translate-x-1/2 gap-14 md:-top-24 lg:-top-32 xl:-top-[130px] ">
+
+                <div >
+                    <img src="assets/lamp.png" alt="">
+                </div>
+
+                <div class="flex justify-center items-center bg-amber-400 rounded-md w-52 py-3 gap-2 drop-shadow-lg hover:filter-none" >
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+        
+                    <span class="text-black">Download The App</span>
+                      
+                </a>
+
+                </div>
+            </div>
+
+
+      <div class="lg:flex lg:flex-row-reverse justify-between lg:justify-center  lg:mx-12 xl:mt-80 flex flex-col-reverse mt-80 md:ml-24 ">
+          
+                <form
+              class="
+                relative
+                border-8
+                border-neutral-900
+                p-6
+                rounded-lg
+                grid
+                gap-8
+                md:flex-1
+                md:max-w-lg
+                my-4
+                md:my-12
+                lg:my-16
+                bg-white
+                dark:bg-neutral-800
+                w-full
+                
+            ">
+          <h2 id="contact" class="text-3xl font-bold">Let’s Connect</h2>
+          <div class="relative">
+            <input type="text" id="name"
+              class="
+                peer
+                form-input
+                w-full
+                border-4
+                border-amber-400
+                rounded-md
+                focus:ring-4
+                dark:focus:ring-offset-2
+                focus:ring-amber-400
+                focus:border-amber-400
+                focus:outline-none
+                dark:bg-amber-400
+                dark:text-neutral-900
+                placeholder-transparent
+            "
+            placeholder="Your Name"
+            >
+            <label for="name"
+            class="
+              text-neutral-500
+              text-sm
+              font-bold
+              uppercase
+              absolute
+              -top-4
+              left-2
+              -translate-y-1/2
+              transition-all
+              peer-placeholder-shown:left-4
+              peer-placeholder-shown:top-1/2
+              peer-placeholder-shown:text-neutral-900
+              peer-focus:-top-4
+              peer-focus:left-2
+              peer-focus:text-neutral-600
+              dark:peer-focus:text-neutral-300
+            ">
+              Your Name
+            </label>
+          </div>
+          <div class="relative">
+            <input type="email" id="email"
+              class="
+                peer
+                form-input
+                w-full
+                border-4
+                border-amber-400
+                rounded-md
+                focus:ring-4
+                dark:focus:ring-offset-2
+                focus:ring-amber-400
+                focus:border-amber-400
+                focus:outline-none
+                dark:bg-amber-400
+                dark:text-neutral-900
+                placeholder-transparent
+              "
+            placeholder="Your Email">
+            <label for="email"
+              class="
+              text-neutral-500
+              text-sm
+              font-bold
+              uppercase
+              absolute
+              -top-4
+              left-2
+              -translate-y-1/2
+              transition-all
+              peer-placeholder-shown:left-4
+              peer-placeholder-shown:top-1/2
+              peer-placeholder-shown:text-neutral-900
+              peer-focus:-top-4
+              peer-focus:left-2
+              peer-focus:text-neutral-600
+              dark:peer-focus:text-neutral-300
+            ">
+            Your Email
+            </label>
+          </div>
+          <div class="relative">
+            <textarea name="content" id="content" cols="20" rows="5"
+            class="
+              peer
+              form-textarea
+              resize-none
+              w-full
+              border-4
+              border-amber-400
+              rounded-md
+              focus:ring-4
+              dark:focus:ring-offset-2
+              focus:ring-amber-400
+              focus:border-amber-400
+              focus:outline-none
+              dark:bg-amber-400
+              dark:text-neutral-900
+              placeholder-transparent
+            "
+            placeholder="How can we help?"></textarea>
+            <label for="content"
+              class="
+                text-neutral-500
+                text-sm
+                font-bold
+                uppercase
+                absolute
+                -top-3
+                left-2
+                -translate-y-1/2
+                transition-all
+                peer-placeholder-shown:left-4
+                peer-placeholder-shown:top-6
+                peer-placeholder-shown:text-neutral-900
+                peer-focus:-top-4
+                peer-focus:left-2
+                peer-focus:text-neutral-600
+                dark:peer-focus:text-neutral-300
+              ">
+                How can we help?
+            </label>
+          </div>
+          <a role="menuitem"
+            class="
+              py-2
+              px-6
+              bg-neutral-900
+              text-white
+              w-max
+              shadow-xl
+              hover:shadow-none
+              transition-shadow
+              focus:outline-none
+              focus-visible:ring-4
+              ring-neutral-900
+              rounded-md
+              ring-offset-4
+              ring-offset-white
+              dark:ring-offset-amber-400
+            "
+            href="/"
+            >
+            Sign Up
+            </a>
+          </form>
+      </div>
+
+
+            
+
+        </section>
+
+        <section>
+            .
+        </section>
+
+        <section>
+            .
+        </section>
+        
+
+    </main>
+    <a href="https://github.com/Surya-bbas"><img alt="Surya Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=Surya-bbas&bg_color=0D1117&color=628FDA&line=628FDA&point=FFFFFF&hide_border=true&theme=tokyonight" /></a>
+
+
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <!--  -->
+</body>
+</html>
